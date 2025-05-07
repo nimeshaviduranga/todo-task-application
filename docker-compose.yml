@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  mysql:
+    build:
+      context: ./database
+    container_name: todo-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootPassword12
+      MYSQL_DATABASE: todo_task_app
+      MYSQL_USER: testUser
+      MYSQL_PASSWORD: testPassword
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - todo-network
+
+volumes:
+  mysql-data:
+
+networks:
+  todo-network:
+    driver: bridge
