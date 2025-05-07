@@ -18,6 +18,16 @@ services:
     networks:
       - todo-network
 
+  frontend:
+    build:
+      context: ./frontend
+    container_name: todo-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    networks:
+      - todo-network
+
 volumes:
   mysql-data:
 
