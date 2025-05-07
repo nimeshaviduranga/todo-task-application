@@ -1,0 +1,26 @@
+.app-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 40px;
+}
+
+.task-form-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.task-list-container {
+  flex: 2;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .task-form-container {
+    max-width: 100%;
+  }
+}
