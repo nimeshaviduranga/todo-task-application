@@ -1,8 +1,7 @@
 export default {
   testEnvironment: 'jsdom',
-  transform: {
-    '^.+\\.(js|jsx)$': 'babel-jest',
-  },
+  transform: {},
+  extensionsToTreatAsEsm: ['.jsx', '.js'],
   moduleNameMapper: {
     '^.+\\.css$': '<rootDir>/src/mocks/styleMock.js'
   },
