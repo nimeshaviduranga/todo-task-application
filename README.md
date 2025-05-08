@@ -39,3 +39,8 @@ A full-stack todo application built with Spring Boot, React, and MySQL.
 5. To remove all data volumes as well:
    ```bash
       docker-compose down -v   
+
+## Screenshots
+
+### Main Application UI with added Tasks
+![Main Application UI with added Tasks](frontend/src/images/UI.JPG)
